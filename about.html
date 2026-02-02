@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <header>
+      <div class="header-inner">
+        <div class="header-left">
+          <button class="action-btn" id="openMenu" type="button" aria-label="Open menu">☰</button>
+        </div>
+
+        <a class="logo-link" href="index.html" aria-label="Go to home">
+          <img class="logo-img" src="images/logo.png" alt="Computer Force Logo">
+        </a>
+
+        <div class="header-right">
+          <button class="action-btn" id="openCart" type="button" aria-label="Open purchases">🛍</button>
+        </div>
+      </div>
+    </header>
+
+    <nav aria-label="Primary navigation">
+      <div class="nav-row">
+        <div class="nav-links">
+          <a href="products.html">Products</a>
+          <a href="register.html">Register</a>
+          <a href="about.html">About</a>
+        </div>
+
+        <div class="search-area">
+          <input id="searchInput" type="text" placeholder="Search products" aria-label="Search term">
+          <button id="searchBtn" type="button">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="content-grid">
+
+      <main>
+        <h1>About Computer Force</h1>
+
+        <p>
+          Computer Force is a brand-new start-up company designed to provide first-class service to its customers.
+          Based in Parramatta in Sydney, Computer Force provides top class computing products at bargain prices,
+          for sale throughout Australia.
+        </p>
+
+        <h2>Our goals are:</h2>
+        <ul>
+          <li>To become Australia’s most well-known and respected hardware and software provider</li>
+          <li>To create a service-based organisation whose goal is to exceed customer's expectations</li>
+          <li>To provide a smooth, efficient, and transparent sales process</li>
+        </ul>
+
+        <h2>You can contact us using the following methods:</h2>
+        <p>
+          <strong>Address:</strong> 100 Main Road, Parramatta, NSW 20150<br>
+          <strong>Email:</strong> info@computerforce.com.au<br>
+          <strong>Phone:</strong> 02 4444 5555
+        </p>
+      </main>
+
+      <aside>
+        <h2>Purchases</h2>
+        <table class="cart-table">
+          <tr><td>Test Item 1</td><td>$1000</td></tr>
+          <tr><td>Test Item 2</td><td>$500</td></tr>
+          <tr><td><strong>Total</strong></td><td><strong>$1500</strong></td></tr>
+        </table>
+        <button class="checkout-btn" type="button">Go to Checkout</button>
+      </aside>
+
+    </div>
+
+    <footer>
+      <p>© 2026 Computer Force. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <div class="drawer-overlay" id="overlay"></div>
+
+  <div class="drawer" id="menuDrawer" aria-label="Mobile menu">
+    <h2>Menu</h2>
+    <div class="nav-links" style="flex-direction: column; align-items: flex-start;">
+      <a href="products.html">Products</a>
+      <a href="register.html">Register</a>
+      <a href="about.html">About</a>
+    </div>
+
+    <div style="margin-top:12px;">
+      <div class="search-area" style="width:100%; flex-direction:column; align-items:stretch;">
+        <input id="searchInputMobile" type="text" placeholder="Search products" aria-label="Search term (mobile)">
+        <button id="searchBtnMobile" type="button">Search</button>
+      </div>
+    </div>
+
+    <button class="drawer-close" id="closeMenu" type="button">Close</button>
+  </div>
+
+  <div class="drawer right" id="cartDrawer" aria-label="Mobile purchases">
+    <h2>Purchases</h2>
+    <table class="cart-table">
+      <tr><td>Test Item 1</td><td>$1000</td></tr>
+      <tr><td>Test Item 2</td><td>$500</td></tr>
+      <tr><td><strong>Total</strong></td><td><strong>$1500</strong></td></tr>
+    </table>
+    <button class="checkout-btn" type="button">Go to Checkout</button>
+    <button class="drawer-close" id="closeCart" type="button">Close</button>
+  </div>
+
+  <script>
+    const overlay = document.getElementById('overlay');
+    const menuDrawer = document.getElementById('menuDrawer');
+    const cartDrawer = document.getElementById('cartDrawer');
+    const openMenu = document.getElementById('openMenu');
+    const openCart = document.getElementById('openCart');
+    const closeMenu = document.getElementById('closeMenu');
+    const closeCart = document.getElementById('closeCart');
+
+    function closeAll() {
+      overlay.classList.remove('open');
+      menuDrawer.classList.remove('open');
+      cartDrawer.classList.remove('open');
+    }
+    openMenu.addEventListener('click', () => { overlay.classList.add('open'); menuDrawer.classList.add('open'); cartDrawer.classList.remove('open'); });
+    openCart.addEventListener('click', () => { overlay.classList.add('open'); cartDrawer.classList.add('open'); menuDrawer.classList.remove('open'); });
+    closeMenu.addEventListener('click', closeAll);
+    closeCart.addEventListener('click', closeAll);
+    overlay.addEventListener('click', closeAll);
+
+    function doSearch(val) {
+      const term = (val || '').trim();
+      if (!term) return alert('Please enter a search term.');
+      alert('Search feature demo: ' + term);
+    }
+    document.getElementById('searchBtn')?.addEventListener('click', () => doSearch(document.getElementById('searchInput').value));
+    document.getElementById('searchBtnMobile')?.addEventListener('click', () => doSearch(document.getElementById('searchInputMobile').value));
+  </script>
+
+</body>
+</html>
