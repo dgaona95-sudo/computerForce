@@ -2,247 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Register</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Force | Register</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <div class="wrapper">
+<header>
+  <a class="brand-wrap" href="index.html">
+    <img src="images/logo.png" alt="Computer Force logo" class="logo">
+    <span class="brand-text">Computer Force</span>
+  </a>
+  <p>Your online expert in all things computing</p>
+</header>
 
-    <header>
-      <div class="header-inner">
-        <div class="header-left">
-          <button class="action-btn" id="openMenu" type="button" aria-label="Open menu">☰</button>
-        </div>
+<nav>
+  <div class="nav-wrap">
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
 
-        <a class="logo-link" href="index.html" aria-label="Go to home">
-          <img class="logo-img" src="images/logo.png" alt="Computer Force Logo">
-        </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="register.html" class="active">Register</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
 
-        <div class="header-right">
-          <button class="action-btn" id="openCart" type="button" aria-label="Open purchases">🛍</button>
-        </div>
-      </div>
-    </header>
-
-    <nav aria-label="Primary navigation">
-      <div class="nav-row">
-        <div class="nav-links">
-          <a href="products.html">Products</a>
-          <a href="register.html">Register</a>
-          <a href="about.html">About</a>
-        </div>
-
-        <div class="search-area">
-          <input id="searchInput" type="text" placeholder="Search products" aria-label="Search term">
-          <button id="searchBtn" type="button">Search</button>
-        </div>
-      </div>
-    </nav>
-
-    <div class="content-grid">
-
-      <main>
-        <h1>Registration Form</h1>
-        <p>Please complete the following form to register for an account on our website.</p>
-
-        <form action="#" method="post" autocomplete="on">
-
-          <h2>Name</h2>
-
-          <p>
-            <label for="username">Username*</label><br>
-            <input id="username" name="username" type="text" required minlength="4" maxlength="20"
-                   pattern="[A-Za-z0-9_]{4,20}" autocomplete="username" placeholder="e.g. computerForce_user">
-          </p>
-
-          <p>
-            <label for="email">Email Address*</label><br>
-            <input id="email" name="email" type="email" required autocomplete="email" placeholder="e.g. name@email.com">
-          </p>
-
-          <p>
-            <label for="password">Password*</label><br>
-            <input id="password" name="password" type="password" required minlength="8" autocomplete="new-password"
-                   placeholder="Minimum 8 characters">
-          </p>
-
-          <p>
-            <label for="confirmPassword">Confirm Password*</label><br>
-            <input id="confirmPassword" name="confirmPassword" type="password" required minlength="8"
-                   autocomplete="new-password" placeholder="Re-enter password">
-          </p>
-
-          <p>
-            <label for="firstName">First Name*</label><br>
-            <input id="firstName" name="firstName" type="text" required minlength="2" maxlength="40"
-                   autocomplete="given-name" placeholder="e.g. Olivia">
-          </p>
-
-          <p>
-            <label for="surname">Surname*</label><br>
-            <input id="surname" name="surname" type="text" required minlength="2" maxlength="40"
-                   autocomplete="family-name" placeholder="e.g. Streets">
-          </p>
-
-          <p>
-            <label for="gender">Gender*</label><br>
-            <select id="gender" name="gender" required>
-              <option value="" selected disabled>Select</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-          </p>
-
-          <p>
-            <label for="dob">Date of Birth</label><br>
-            <input id="dob" name="dob" type="date" autocomplete="bday">
-          </p>
-
-          <h2>Address</h2>
-
-          <p>
-            <label for="address">Address*</label><br>
-            <input id="address" name="address" type="text" required minlength="5" maxlength="80"
-                   autocomplete="street-address" placeholder="Street address">
-          </p>
-
-          <p>
-            <label for="suburb">Suburb*</label><br>
-            <input id="suburb" name="suburb" type="text" required minlength="2" maxlength="50"
-                   autocomplete="address-level2" placeholder="e.g. Parramatta">
-          </p>
-
-          <p>
-            <label for="postcode">Postcode*</label><br>
-            <input id="postcode" name="postcode" type="text" required pattern="[0-9]{4}" maxlength="4"
-                   inputmode="numeric" autocomplete="postal-code" placeholder="4-digit postcode">
-          </p>
-
-          <p>
-            <label for="state">State*</label><br>
-            <select id="state" name="state" required autocomplete="address-level1">
-              <option value="" selected disabled>Select</option>
-              <option value="ACT">ACT</option>
-              <option value="NSW">NSW</option>
-              <option value="NT">NT</option>
-              <option value="QLD">QLD</option>
-              <option value="SA">SA</option>
-              <option value="TAS">TAS</option>
-              <option value="VIC">VIC</option>
-              <option value="WA">WA</option>
-            </select>
-          </p>
-
-          <p>
-            <label for="phone">Phone number</label><br>
-            <input id="phone" name="phone" type="tel" pattern="[0-9 +()-]{8,20}" inputmode="tel"
-                   autocomplete="tel" placeholder="e.g. 02 4444 5555">
-          </p>
-
-          <h2>Notes</h2>
-          <p>
-            <label for="notes">Notes</label><br>
-            <textarea id="notes" name="notes" rows="4" placeholder="Optional notes..."></textarea>
-          </p>
-
-          <p>
-            <button class="checkout-btn" type="reset">Clear</button>
-          </p>
-          <p>
-            <button class="checkout-btn" type="submit">Register</button>
-          </p>
-
-        </form>
-      </main>
-
-      <aside>
-        <h2>Purchases</h2>
-        <table class="cart-table">
-          <tr><td>Test Item 1</td><td>$1000</td></tr>
-          <tr><td>Test Item 2</td><td>$500</td></tr>
-          <tr><td><strong>Total</strong></td><td><strong>$1500</strong></td></tr>
-        </table>
-        <button class="checkout-btn" type="button">Go to Checkout</button>
-      </aside>
-
+    <div class="search-box" role="search">
+      <input type="text" placeholder="Search products" aria-label="Search products">
+      <button type="button">Search</button>
     </div>
-
-    <footer>
-      <p>© 2026 Computer Force. All rights reserved.</p>
-    </footer>
-
   </div>
+</nav>
 
-  <div class="drawer-overlay" id="overlay"></div>
+<div class="layout">
+  <main>
+    <section>
+      <h2>Registration Form</h2>
+      <p>Please complete the registration form below. Fields marked with * are required.</p>
 
-  <div class="drawer" id="menuDrawer" aria-label="Mobile menu">
-    <h2>Menu</h2>
-    <div class="nav-links" style="flex-direction: column; align-items: flex-start;">
-      <a href="products.html">Products</a>
-      <a href="register.html">Register</a>
-      <a href="about.html">About</a>
-    </div>
-    <div style="margin-top:12px;">
-      <div class="search-area" style="width:100%; flex-direction:column; align-items:stretch;">
-        <input id="searchInputMobile" type="text" placeholder="Search products" aria-label="Search term (mobile)">
-        <button id="searchBtnMobile" type="button">Search</button>
-      </div>
-    </div>
-    <button class="drawer-close" id="closeMenu" type="button">Close</button>
+      <form>
+        <label for="fullname">Full Name *</label>
+        <input id="fullname" type="text" required>
+
+        <label for="email">Email *</label>
+        <input id="email" type="email" required>
+
+        <label for="password">Password *</label>
+        <input id="password" type="password" required>
+
+        <label for="confirm">Confirm Password *</label>
+        <input id="confirm" type="password" required>
+
+        <div class="form-buttons">
+          <button type="reset" class="secondary">Clear</button>
+          <button type="submit" class="primary">Register</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <aside>
+    <h3>Purchases</h3>
+    <p>No items selected</p>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-wrap">
+    <p><strong>Computer Force</strong></p>
+    <p>Quality computers and accessories</p>
+    <p>Email: info@computerforce.com.au</p>
+    <p>&copy; 2024 Computer Force. All rights reserved.</p>
   </div>
+</footer>
 
-  <div class="drawer right" id="cartDrawer" aria-label="Mobile purchases">
-    <h2>Purchases</h2>
-    <table class="cart-table">
-      <tr><td>Test Item 1</td><td>$1000</td></tr>
-      <tr><td>Test Item 2</td><td>$500</td></tr>
-      <tr><td><strong>Total</strong></td><td><strong>$1500</strong></td></tr>
-    </table>
-    <button class="checkout-btn" type="button">Go to Checkout</button>
-    <button class="drawer-close" id="closeCart" type="button">Close</button>
-  </div>
-
-  <script>
-    const overlay = document.getElementById('overlay');
-    const menuDrawer = document.getElementById('menuDrawer');
-    const cartDrawer = document.getElementById('cartDrawer');
-    const openMenu = document.getElementById('openMenu');
-    const openCart = document.getElementById('openCart');
-    const closeMenu = document.getElementById('closeMenu');
-    const closeCart = document.getElementById('closeCart');
-
-    function closeAll() {
-      overlay.classList.remove('open');
-      menuDrawer.classList.remove('open');
-      cartDrawer.classList.remove('open');
-    }
-    openMenu.addEventListener('click', () => { overlay.classList.add('open'); menuDrawer.classList.add('open'); cartDrawer.classList.remove('open'); });
-    openCart.addEventListener('click', () => { overlay.classList.add('open'); cartDrawer.classList.add('open'); menuDrawer.classList.remove('open'); });
-    closeMenu.addEventListener('click', closeAll);
-    closeCart.addEventListener('click', closeAll);
-    overlay.addEventListener('click', closeAll);
-
-    function doSearch(val) {
-      const term = (val || '').trim();
-      if (!term) return alert('Please enter a search term.');
-      alert('Search feature demo: ' + term);
-    }
-    document.getElementById('searchBtn')?.addEventListener('click', () => doSearch(document.getElementById('searchInput').value));
-    document.getElementById('searchBtnMobile')?.addEventListener('click', () => doSearch(document.getElementById('searchInputMobile').value));
-
-    // Optional: simple password match hint (still complies)
-    const pw = document.getElementById('password');
-    const cpw = document.getElementById('confirmPassword');
-    cpw.addEventListener('input', () => {
-      if (pw.value && cpw.value && pw.value !== cpw.value) {
-        cpw.setCustomValidity('Passwords do not match');
-      } else {
-        cpw.setCustomValidity('');
-      }
-    });
-  </script>
-
+<script src="js/script.js"></script>
 </body>
 </html>

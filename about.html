@@ -2,148 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Force | About</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <div class="wrapper">
+<header>
+  <a class="brand-wrap" href="index.html">
+    <img src="images/logo.png" alt="Computer Force logo" class="logo">
+    <span class="brand-text">Computer Force</span>
+  </a>
+  <p>Your online expert in all things computing</p>
+</header>
 
-    <header>
-      <div class="header-inner">
-        <div class="header-left">
-          <button class="action-btn" id="openMenu" type="button" aria-label="Open menu">☰</button>
-        </div>
+<nav>
+  <div class="nav-wrap">
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
 
-        <a class="logo-link" href="index.html" aria-label="Go to home">
-          <img class="logo-img" src="images/logo.png" alt="Computer Force Logo">
-        </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+    </ul>
 
-        <div class="header-right">
-          <button class="action-btn" id="openCart" type="button" aria-label="Open purchases">🛍</button>
-        </div>
-      </div>
-    </header>
-
-    <nav aria-label="Primary navigation">
-      <div class="nav-row">
-        <div class="nav-links">
-          <a href="products.html">Products</a>
-          <a href="register.html">Register</a>
-          <a href="about.html">About</a>
-        </div>
-
-        <div class="search-area">
-          <input id="searchInput" type="text" placeholder="Search products" aria-label="Search term">
-          <button id="searchBtn" type="button">Search</button>
-        </div>
-      </div>
-    </nav>
-
-    <div class="content-grid">
-
-      <main>
-        <h1>About Computer Force</h1>
-
-        <p>
-          Computer Force is a brand-new start-up company designed to provide first-class service to its customers.
-          Based in Parramatta in Sydney, Computer Force provides top class computing products at bargain prices,
-          for sale throughout Australia.
-        </p>
-
-        <h2>Our goals are:</h2>
-        <ul>
-          <li>To become Australia’s most well-known and respected hardware and software provider</li>
-          <li>To create a service-based organisation whose goal is to exceed customer's expectations</li>
-          <li>To provide a smooth, efficient, and transparent sales process</li>
-        </ul>
-
-        <h2>You can contact us using the following methods:</h2>
-        <p>
-          <strong>Address:</strong> 100 Main Road, Parramatta, NSW 20150<br>
-          <strong>Email:</strong> info@computerforce.com.au<br>
-          <strong>Phone:</strong> 02 4444 5555
-        </p>
-      </main>
-
-      <aside>
-        <h2>Purchases</h2>
-        <table class="cart-table">
-          <tr><td>Test Item 1</td><td>$1000</td></tr>
-          <tr><td>Test Item 2</td><td>$500</td></tr>
-          <tr><td><strong>Total</strong></td><td><strong>$1500</strong></td></tr>
-        </table>
-        <button class="checkout-btn" type="button">Go to Checkout</button>
-      </aside>
-
+    <div class="search-box" role="search">
+      <input type="text" placeholder="Search products" aria-label="Search products">
+      <button type="button">Search</button>
     </div>
-
-    <footer>
-      <p>© 2026 Computer Force. All rights reserved.</p>
-    </footer>
-
   </div>
+</nav>
 
-  <div class="drawer-overlay" id="overlay"></div>
+<div class="layout">
+  <main>
+    <!-- ABOUT INTRO -->
+    <section>
+      <h2>About Computer Force</h2>
 
-  <div class="drawer" id="menuDrawer" aria-label="Mobile menu">
-    <h2>Menu</h2>
-    <div class="nav-links" style="flex-direction: column; align-items: flex-start;">
-      <a href="products.html">Products</a>
-      <a href="register.html">Register</a>
-      <a href="about.html">About</a>
-    </div>
+      <p>
+        Computer Force is an Australian-based online retailer specialising in computers,
+        accessories, and technology solutions for home and business users.
+        Our goal is to make quality computing products accessible, affordable, and easy to purchase.
+      </p>
 
-    <div style="margin-top:12px;">
-      <div class="search-area" style="width:100%; flex-direction:column; align-items:stretch;">
-        <input id="searchInputMobile" type="text" placeholder="Search products" aria-label="Search term (mobile)">
-        <button id="searchBtnMobile" type="button">Search</button>
-      </div>
-    </div>
+      <p>
+        We understand that technology plays an important role in everyday life.
+        That is why Computer Force focuses on providing reliable products,
+        clear information, and a user-friendly online shopping experience.
+      </p>
+    </section>
 
-    <button class="drawer-close" id="closeMenu" type="button">Close</button>
+    <!-- MISSION -->
+    <section class="info-block">
+      <h3>Our Mission</h3>
+      <p>
+        Our mission is to deliver high-quality computing products while offering a simple,
+        accessible, and responsive website that works across all devices.
+        We aim to support customers by making it easy to browse products,
+        register accounts, and find the information they need.
+      </p>
+    </section>
+
+    <!-- WHAT WE OFFER -->
+    <section class="info-block">
+      <h3>What We Offer</h3>
+      <ul class="list">
+        <li>Desktop computers and laptops for work, study, and home use</li>
+        <li>Monitors, tablets, and peripheral devices</li>
+        <li>Printing and scanning solutions</li>
+        <li>Software products and accessories</li>
+      </ul>
+    </section>
+
+    <!-- VALUES -->
+    <section class="info-block">
+      <h3>Why Choose Computer Force</h3>
+      <ul class="list">
+        <li>Clear and simple website navigation</li>
+        <li>Responsive design for desktop, tablet, and mobile devices</li>
+        <li>Focus on usability and accessibility</li>
+        <li>Trusted products and straightforward purchasing process</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="info-block contact-box">
+      <h3>Contact Information</h3>
+      <p>If you have any questions or need further information, please contact us:</p>
+
+      <ul class="list">
+        <li>Email: info@computerforce.com.au</li>
+        <li>Phone: (02) 0000 0000</li>
+        <li>Location: Sydney, NSW, Australia</li>
+      </ul>
+    </section>
+  </main>
+
+  <aside>
+    <h3>Purchases</h3>
+    <p>No items selected</p>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-wrap">
+    <p><strong>Computer Force</strong></p>
+    <p>Quality computers and accessories</p>
+    <p>Email: info@computerforce.com.au</p>
+    <p>&copy; 2024 Computer Force. All rights reserved.</p>
   </div>
+</footer>
 
-  <div class="drawer right" id="cartDrawer" aria-label="Mobile purchases">
-    <h2>Purchases</h2>
-    <table class="cart-table">
-      <tr><td>Test Item 1</td><td>$1000</td></tr>
-      <tr><td>Test Item 2</td><td>$500</td></tr>
-      <tr><td><strong>Total</strong></td><td><strong>$1500</strong></td></tr>
-    </table>
-    <button class="checkout-btn" type="button">Go to Checkout</button>
-    <button class="drawer-close" id="closeCart" type="button">Close</button>
-  </div>
-
-  <script>
-    const overlay = document.getElementById('overlay');
-    const menuDrawer = document.getElementById('menuDrawer');
-    const cartDrawer = document.getElementById('cartDrawer');
-    const openMenu = document.getElementById('openMenu');
-    const openCart = document.getElementById('openCart');
-    const closeMenu = document.getElementById('closeMenu');
-    const closeCart = document.getElementById('closeCart');
-
-    function closeAll() {
-      overlay.classList.remove('open');
-      menuDrawer.classList.remove('open');
-      cartDrawer.classList.remove('open');
-    }
-    openMenu.addEventListener('click', () => { overlay.classList.add('open'); menuDrawer.classList.add('open'); cartDrawer.classList.remove('open'); });
-    openCart.addEventListener('click', () => { overlay.classList.add('open'); cartDrawer.classList.add('open'); menuDrawer.classList.remove('open'); });
-    closeMenu.addEventListener('click', closeAll);
-    closeCart.addEventListener('click', closeAll);
-    overlay.addEventListener('click', closeAll);
-
-    function doSearch(val) {
-      const term = (val || '').trim();
-      if (!term) return alert('Please enter a search term.');
-      alert('Search feature demo: ' + term);
-    }
-    document.getElementById('searchBtn')?.addEventListener('click', () => doSearch(document.getElementById('searchInput').value));
-    document.getElementById('searchBtnMobile')?.addEventListener('click', () => doSearch(document.getElementById('searchInputMobile').value));
-  </script>
-
+<script src="js/script.js"></script>
 </body>
 </html>
