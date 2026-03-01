@@ -36,7 +36,6 @@ if (cartFab) cartFab.addEventListener('click', openCart);
 if (drawerClose) drawerClose.addEventListener('click', closeCart);
 if (drawerOverlay) drawerOverlay.addEventListener('click', closeCart);
 
-// Close drawer with Escape
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeCart();
 });
