@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Force | Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <a class="brand-wrap" href="index.html">
+    <img src="images/logo.png" alt="Computer Force logo" class="logo">
+    <span class="brand-text">Computer Force</span>
+  </a>
+  <p>Your online expert in all things computing</p>
+</header>
+
+<nav>
+  <div class="nav-wrap">
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="duvan/index.html">Duvan</a></li>
+    </ul>
+
+    <div class="search-box" role="search">
+      <input type="text" placeholder="Search products" aria-label="Search products">
+      <button type="button">Search</button>
+    </div>
+  </div>
+</nav>
+
+<div class="layout">
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Quality computers and accessories</h1>
+        <p>Computer Force is your trusted online store for computers, laptops, monitors, printing &amp; scanning, software and tablets.</p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="products.html">View Products</a>
+          <a class="btn secondary" href="register.html">Register Now</a>
+        </div>
+
+        <div class="hero-badges">
+          <span class="badge">Fast delivery</span>
+          <span class="badge">Trusted products</span>
+          <span class="badge">Easy ordering</span>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/placeholder-laptops.jpg" alt="Featured laptop products">
+      </div>
+    </section>
+
+    <section>
+      <h2>Featured Categories</h2>
+      <p>Explore our most popular categories.</p>
+
+      <div class="featured-grid">
+        <a class="feature-card" href="products.html">
+          <img src="images/placeholder-computers.jpg" alt="Computers category">
+          <div class="feature-card-text">
+            <h3>Computers</h3>
+            <p>Reliable desktop systems for work and home.</p>
+          </div>
+        </a>
+
+        <a class="feature-card" href="products.html">
+          <img src="images/placeholder-monitors.jpg" alt="Monitors category">
+          <div class="feature-card-text">
+            <h3>Monitors</h3>
+            <p>High-quality displays for productivity and gaming.</p>
+          </div>
+        </a>
+
+        <a class="feature-card" href="products.html">
+          <img src="images/placeholder-printing.jpg" alt="Printing and scanning category">
+          <div class="feature-card-text">
+            <h3>Printing &amp; Scanning</h3>
+            <p>Printers and scanners for home and office.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why choose Computer Force</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <h3>Quality range</h3>
+          <p>Wide range of products and accessories for different needs.</p>
+        </div>
+        <div class="why-item">
+          <h3>Easy to use</h3>
+          <p>Clear navigation and a simple registration process.</p>
+        </div>
+        <div class="why-item">
+          <h3>Responsive design</h3>
+          <p>Works well on desktop, laptop, tablet and mobile devices.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="purchases-panel">
+    <h3>Purchases</h3>
+    <div class="cart-lines">
+      <div class="cart-line"><span>Test Item 1</span><span>$1000</span></div>
+      <div class="cart-line"><span>Test Item 2</span><span>$500</span></div>
+      <div class="cart-total"><span>Total</span><span>$1500</span></div>
+    </div>
+    <button class="checkout-btn" type="button">Go to Checkout</button>
+  </aside>
+</div>
+
+<button class="cart-fab" type="button" aria-label="Open purchases" aria-controls="cartDrawer" aria-expanded="false">🛍️</button>
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+
+<aside class="cart-drawer" id="cartDrawer" aria-hidden="true" role="dialog" aria-label="Purchases drawer">
+  <div class="drawer-header">
+    <h3>Purchases</h3>
+    <button class="drawer-close" type="button" aria-label="Close purchases">✕</button>
+  </div>
+
+  <div class="cart-lines">
+    <div class="cart-line"><span>Test Item 1</span><span>$1000</span></div>
+    <div class="cart-line"><span>Test Item 2</span><span>$500</span></div>
+    <div class="cart-total"><span>Total</span><span>$1500</span></div>
+  </div>
+
+  <button class="checkout-btn" type="button">Go to Checkout</button>
+</aside>
+
+<footer>
+  <div class="footer-wrap">
+    <p><strong>Computer Force</strong></p>
+    <p>Quality computers and accessories</p>
+    <p>Email: info@computerforce.com.au</p>
+    <p>&copy; 2024 Computer Force. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
